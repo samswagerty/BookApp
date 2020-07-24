@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Your Book List</title>
+	<link rel="stylesheet" href="myBookApp.css">
+</head>
+<body>
+	<div>
+		<header><h1>Your Book List</h1></header>
+	</div>
+
+	<div class="form-popup"id="form-popup">
+		<form action="/action_page.php" class="form-container">
+			<div>
+    		<h1>Enter New Book</h1>
+
+		    <label for="bookTitle"><b>Book Title</b></label>
+		    <input type="text" placeholder="Enter Book Title" name="title" required>
+
+		    <label for="author"><b>Author</b></label>
+		    <input type="text" placeholder="Enter Author" name="author" required>
+
+		    <label for="pageCount"><b>Page Count</b></label>
+		    <input type="number" placeholder="Enter Page Count" name="pageCount" required>
+
+		    <label for="status"><b>Status</b></label>
+		    <select  name="status" required>
+		    	<option value="Read">Read</option>
+		    	<option value="Reading">Reading</option>
+		    	<option value="Want To Read">Want to Read</option>	
+			</select>
+			<button type="submit" class="btn submit" onclick="closeForm()">Submit</button>
+			</div>
+ 		</form>
+		
+	</div>
+
+	<button type="submit" class="btn" id="newBookButton" onclick="openForm()">New Book</button>
+	<!-- <button type="submit" class="btn cancel" id="closeButton" onclick="closeForm()">Close</button> -->
+</body>
+
+<script src="myBookApp.js"></script>
+</html>
